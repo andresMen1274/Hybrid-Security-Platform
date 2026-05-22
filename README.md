@@ -187,7 +187,6 @@ After the login credentials have been compromised run the command wget https://g
 This confirms success and that the user system has now been comprimised. 
 
 ## Detection & Investigation
-
 ### Detection Examples
 - Windows Event ID 4625 failed login detection
 - Suricata network scanning alerts
