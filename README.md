@@ -8,6 +8,32 @@ In this project I will be updating my opnsense network to have network segmentat
 
 <img width="781" height="518" alt="image" src="https://github.com/user-attachments/assets/c546cc7e-301c-45fc-830a-f5c2356953d8" />
 
+We will set up a virtual environment using a Wide Area Network(WAN) and Local Area Network(LAN) and simulate a network connection between them. After downloading Virtual Box and Kali Linux I configure a Wide Area Network(WAN) and Local Area Network(LAN) and simulate a network connection between them. Network Adapter one is used to simulate the WAN connection. Then adapater two is used to simulate a LAN connection.
+
+<img width="688" height="366" alt="image" src="https://github.com/user-attachments/assets/9f1c844a-669a-4091-b3db-938e700fbd69" />
+
+<img width="692" height="367" alt="image" src="https://github.com/user-attachments/assets/55bf9045-a1ba-469a-8792-03237989b362" />
+
+Using the downloaded Opnsense file we will start the virtual machine with this disk file.
+
+<img width="808" height="496" alt="image" src="https://github.com/user-attachments/assets/608b05f5-50ca-4e86-8a87-60fb82e04ad8" />
+
+Using the defalut username installer and password opnsense. We are able to open the opnsense download menu.
+
+<img width="732" height="496" alt="image" src="https://github.com/user-attachments/assets/885e27cb-3431-43e4-8a7b-787832a5d77f" />
+
+After successfully downloading the firewall we remove the firewall disk and reboot the system. We will now login as a root user and assign the interfaces em0 will serve as the WAN interface and em1 will serve as the LAN interface. I will not configure the IP address as defalut one is given.
+
+<img width="721" height="492" alt="image" src="https://github.com/user-attachments/assets/80853861-b6d9-40fa-bfbb-a9234fa5c772" />
+
+Next we will boot up kali linux and ping to the LAN interface to check that the connection was configured correctly.
+
+<img width="918" height="731" alt="image" src="https://github.com/user-attachments/assets/fe44590f-da46-4242-8d80-a7ad670b0414" />
+
+Then I will open the web browser and look up the defalut IP that was given and login to opnsense and check the status of the system. Then I go to firmware and check the status of the system and give updates to the system.
+
+<img width="1272" height="921" alt="image" src="https://github.com/user-attachments/assets/d7f00c16-d0c1-4da2-94d7-625338ce195a" />
+
 The first thing that must be done is add new internal networks adapters to the firewall. This is done by navigating to the settings and enabling all four network adapters. The first adapter should be set as a NAT network. What this does is allow for Network Address Translation between the WAN and the private LAN. This translates each virtual machines private IP address to the host machines public IP address for packets recieving and sending packets. Now to create each subnet name adapters 2-4 the following names intnet-client, intnet-server, and intnet-DMZ. Each network will host different machines. As seen in the diagram the client side will hold a windows 10 virtual machine. The server side will hold the Wazuh server and the active directory server. Then the demilitarized zone will hold the kali linux virtual machine. 
 
 Then we will navigate to the kali linux machine and assign the different interfaces. This is done by logging into the opnsense firewall login page and navigating to interfaces and assignments. Then select each of the network adapters(em1, em2, em3) and name them client, server, and DMZ respectively. 
