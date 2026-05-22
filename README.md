@@ -26,7 +26,7 @@ After successfully downloading the firewall we remove the firewall disk and rebo
 
 <img width="721" height="492" alt="image" src="https://github.com/user-attachments/assets/80853861-b6d9-40fa-bfbb-a9234fa5c772" />
 
-Next we will boot up kali linux and ping to the LAN interface to check that the connection was configured correctly.
+Before booting up Kali Linux naviagte to the network adapters. Set the first adaper to NAT network(which allows for internet connection) and set the second adapeter to the LAN we have configured. This will allow the Kali Linux virtual machine to have internet connection, while also having access to the firewall we have configured. Next we will boot up kali linux and ping the Firewall virtual machine to check that the connection was configured correctly.
 
 <img width="918" height="731" alt="image" src="https://github.com/user-attachments/assets/fe44590f-da46-4242-8d80-a7ad670b0414" />
 
@@ -54,7 +54,7 @@ We will add rules to all of the networks to simulate real network segmentation. 
 
 For the Client net the rules go as follows: Set Action: Pass, Interface: Client, Protocol: Any, Source: Client net, and Destination: any. Set Action: Pass, Interface: Client, Protocol: Any, Source: Client net, and Destination: Server net. For the DMZ net the rules go as folows: Action: Block, Interface: DMZ, Protocol: IPv4, Source: DMZ net, and Destination: Client net. Action: Block, Interface: DMZ, Protocol: IPv4, Source: DMZ net, and Destination: Server net. Action: Pass, Interface: DMZ, Protocol: IPv4, Source: DMZ net, and Destination: Any. Finally, the Server rules go as follows: Action: Pass, Interface: Server, Protocol: IPv4, Source: Server net, and Destination: Any. 
 
-Now I will add the Winodws 10 virtual machine and the Windows Active Directory Server. Create a new virtual machine with the Windows 10 iso image. I gave my machine 4096 MB and 1 CPU ad secleted skip unintended install. 
+Now I will add the Windows 10 virtual machine and the Windows Active Directory Server. Create a new virtual machine with the Windows 10 iso image. I gave my machine 4096 MB and 1 CPU ad secleted skip unintended install. 
 
 <img width="940" height="725" alt="image" src="https://github.com/user-attachments/assets/7138ce8e-26a2-476d-ad97-e912b06985a3" />
 
