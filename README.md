@@ -196,7 +196,7 @@ Then copy the rockyou.txt file to the ad-project directory. Enter the directory 
 - Source IP correlation
 - Alert triage
 
-Now I will like to look at the logs generated as a result of this. Login to the Wazuh dashboard and enter the credintals. Select Modiules -> security Events and enter the number 4625(this number correlates to failed login attempts). 
+Now we will investigate the brute force logs that Wazuh collected. Login to the Wazuh dashboard and enter the credintals. Select Modiules -> security Events and enter the number 4625(this number correlates to failed login attempts). 
 
 <img width="1047" height="535" alt="image" src="https://github.com/user-attachments/assets/918492ba-a63c-42ea-8af2-c8db87b0f1e4" />
 
