@@ -16,6 +16,13 @@ This project simulates enterprise-style security monitoring by centralizing endp
 - Automated user provisioning scripts
 - Threat investigation workflows
 
+## Security Design Decisions
+
+- Segmented client and security networks to limit lateral movement
+- Restricted DMZ access to monitored services only
+- Centralized telemetry using Wazuh for unified investigation workflows
+- Used Sysmon to increase Windows endpoint visibility
+
 ## Opnsense-Firewall-Network-Segmentation
 We will set up a virtual environment using a Wide Area Network(WAN) and Local Area Network(LAN) and simulate a network connection between them. After downloading Virtual Box and Kali Linux we will configure a Wide Area Network(WAN) and Local Area Network(LAN) and simulate a network connection between them. Network Adapter one is used to simulate the WAN connection. Then adapater two is used to simulate a LAN connection.
 
@@ -127,12 +134,6 @@ Install the Wazuh agent onto the Windows 10 machine as previously stated. After 
 <img width="647" height="106" alt="image" src="https://github.com/user-attachments/assets/521f7533-528c-4b6d-b3d5-65f8ee618a1a" />
 
 It will fail because of a rule that we previously configured to not allow the DMZ and Client networks to communicate with one another. To fix this navigate to the search bar and search the IP address of the firewall. Once this is done select Firewall -> Rules -> DMZ. Replace the old rule and allow traffic from the DMZ to the Client network. 
-
-Security Design Decisions
-- Added network segmentation creating Client, Server, and DMZ networks to reduce latteral movement of attackers.
-- Prevented DMZ communication with the Client and Server networks. This is done to simulate an untrusted external zone.
-- Allowed Client and Server communication for authentication and services.
-- Designed to reduce latteral movement of attackers if the system is infiltrated.
 
 ## Attack-Simulation
 Simulated adversary behaviors within an isolated lab environment to validate detection coverage and monitoring capabilities.
