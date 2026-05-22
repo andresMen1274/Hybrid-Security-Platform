@@ -3,7 +3,7 @@ Automated hybrid security platform integrating AWS, Wazuh SIEM, Suricata IDS/IPS
 
 This project simulates enterprise-style security monitoring by centralizing endpoint, network, and cloud telemetry into a unified detection and investigation environment.
 ## Architecture Overview
-<img width="937" height="622" alt="image" src="https://github.com/user-attachments/assets/b387314f-b4b6-454a-abff-f08fbf3b68b1" />
+<img width="942" height="630" alt="image" src="https://github.com/user-attachments/assets/bdb58ab0-b10d-4d86-8fd8-da4b9aad1cf9" />
 
 ## Key Features
 
