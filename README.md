@@ -3,7 +3,7 @@ Automated hybrid security platform integrating AWS, Wazuh SIEM, Suricata IDS/IPS
 
 In this repository I will walk through the configuration of the tools, enviorment, detection rules, automation, and attack scenarios.
 
-# SOpnsense-Firewall-Network-Segmentation
+# Opnsense-Firewall-Network-Segmentation
 In this project I will be updating my opnsense network to have network segmentation. This is the diagram of how the new network will look after the implementation of network segmentation. 
 
 <img width="781" height="518" alt="image" src="https://github.com/user-attachments/assets/c546cc7e-301c-45fc-830a-f5c2356953d8" />
