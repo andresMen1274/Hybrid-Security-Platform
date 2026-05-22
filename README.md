@@ -16,7 +16,7 @@ This project simulates enterprise-style security monitoring by centralizing endp
 - Automated user provisioning scripts
 - Threat investigation workflows
 
-# Opnsense-Firewall-Network-Segmentation
+## Opnsense-Firewall-Network-Segmentation
 We will set up a virtual environment using a Wide Area Network(WAN) and Local Area Network(LAN) and simulate a network connection between them. After downloading Virtual Box and Kali Linux we will configure a Wide Area Network(WAN) and Local Area Network(LAN) and simulate a network connection between them. Network Adapter one is used to simulate the WAN connection. Then adapater two is used to simulate a LAN connection.
 
 <img width="688" height="366" alt="image" src="https://github.com/user-attachments/assets/9f1c844a-669a-4091-b3db-938e700fbd69" />
@@ -134,7 +134,7 @@ Security Design Decisions
 - Allowed Client and Server communication for authentication and services.
 - Designed to reduce latteral movement of attackers if the system is infiltrated.
 
-# Attack-Simulation
+## Attack-Simulation
 First we will be installing Sysmon onto my Windows 10 virtual machine. We will be doing this because it provides deeper endpoint visibility. To download Sysmon search Sysmon and download it from the offical Microsoft website. 
 
 <img width="357" height="273" alt="image" src="https://github.com/user-attachments/assets/ec5c63e5-3520-45d6-b4a9-fc996a2d7d32" />
