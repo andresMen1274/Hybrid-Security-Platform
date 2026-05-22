@@ -215,7 +215,7 @@ Open the log to see more detailed information about how the attempt.
 
 From the information given we can see the IP address of the Kali Linux machine and the fail login attempts.
 
-# Cloud
+## Cloud
 Create a free AWS account. Then we will configure a VPC(virtual private cloud) search VPC -> create VPC. Select VPC and more, name the VPC(in my case it is named SIEM-lab-VPC), set number of avaliability zones to 1, number of public subnets to 1, number of private subnets 0, and no NAT gateways. Now after the VPC has been created we will launch our first EC2 instance. Navigate to EC2 -> instance -> launch instances and name the EC2 instance. The OS image I have selected is the AWS 2023 Linux image, t3.micro for instance type, create a new key pair(leave it as RSA encryption), set the VPC to the newly created SIEM-lab-VPC, enable auto assign public IP, allow SSH and only allow connections from My IP, Create a new security group(name it), and launch instance. 
 
 Now we will make sure that the VPC and instance has been created. To do this naviagte to VPC -> your VPCs. To check that the instance has been successfully created by navigating to EC2 -> instances. Important note make sure that the EC2 instance is stopped while it is not in use. 
