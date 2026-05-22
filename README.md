@@ -8,7 +8,7 @@ In this project I will be updating my opnsense network to have network segmentat
 
 <img width="781" height="518" alt="image" src="https://github.com/user-attachments/assets/c546cc7e-301c-45fc-830a-f5c2356953d8" />
 
-We will set up a virtual environment using a Wide Area Network(WAN) and Local Area Network(LAN) and simulate a network connection between them. After downloading Virtual Box and Kali Linux I configure a Wide Area Network(WAN) and Local Area Network(LAN) and simulate a network connection between them. Network Adapter one is used to simulate the WAN connection. Then adapater two is used to simulate a LAN connection.
+We will set up a virtual environment using a Wide Area Network(WAN) and Local Area Network(LAN) and simulate a network connection between them. After downloading Virtual Box and Kali Linux we will configure a Wide Area Network(WAN) and Local Area Network(LAN) and simulate a network connection between them. Network Adapter one is used to simulate the WAN connection. Then adapater two is used to simulate a LAN connection.
 
 <img width="688" height="366" alt="image" src="https://github.com/user-attachments/assets/9f1c844a-669a-4091-b3db-938e700fbd69" />
 
