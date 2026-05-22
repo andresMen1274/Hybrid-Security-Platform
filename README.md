@@ -135,6 +135,15 @@ Security Design Decisions
 - Designed to reduce latteral movement of attackers if the system is infiltrated.
 
 ## Attack-Simulation
+Simulated adversary behaviors within an isolated lab environment to validate detection coverage and monitoring capabilities.
+
+### Simulated Activity
+- RDP brute-force attacks
+- Network reconnaissance
+- Port scanning
+- Unauthorized AWS API activity
+- Lateral movement simulation
+
 First we will be installing Sysmon onto my Windows 10 virtual machine. We will be doing this because it provides deeper endpoint visibility. To download Sysmon search Sysmon and download it from the offical Microsoft website. 
 
 <img width="357" height="273" alt="image" src="https://github.com/user-attachments/assets/ec5c63e5-3520-45d6-b4a9-fc996a2d7d32" />
@@ -175,7 +184,23 @@ Then copy the rockyou.txt file to the ad-project directory. Enter the directory 
 
 After the login credentials have been compromised run the command wget https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer32.exe -O printspoofer.exe on the Kali Linux machine to create a script for privlage escalation. After it has been downloaded on the kali linux machine start a http server with Python using the command python3 -m http.server 8000. On the Windows 10 VM enter http://10.200.30.10:8000 and download the printSpoofer.exe file. 
 
-This confirms success and that the user system has now been comprimised. Now I will like to look at the logs generated as a result of this. Login to the Wazuh dashboard and enter the credintals. Select Modiules -> security Events and enter the number 4625(this number correlates to failed login attempts). 
+This confirms success and that the user system has now been comprimised. 
+
+## Detection & Investigation
+
+### Detection Examples
+- Windows Event ID 4625 failed login detection
+- Suricata network scanning alerts
+- AWS CloudTrail unauthorized API monitoring
+- Wazuh brute-force correlation alerts
+
+### Investigation Workflow
+- Centralized telemetry review
+- IOC identification
+- Source IP correlation
+- Alert triage
+
+Now I will like to look at the logs generated as a result of this. Login to the Wazuh dashboard and enter the credintals. Select Modiules -> security Events and enter the number 4625(this number correlates to failed login attempts). 
 
 <img width="1047" height="535" alt="image" src="https://github.com/user-attachments/assets/918492ba-a63c-42ea-8af2-c8db87b0f1e4" />
 
