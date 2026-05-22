@@ -1,13 +1,22 @@
 # Hybrid-Security-Platform
 Automated hybrid security platform integrating AWS, Wazuh SIEM, Suricata IDS/IPS, OPNsense segmentation, Terraform infrastructure deployment, and scripted user provisioning for centralized monitoring, threat detection, and security operations workflows.
 
-In this repository I will walk through the configuration of the tools, enviorment, detection rules, automation, and attack scenarios.
-
-# Opnsense-Firewall-Network-Segmentation
-In this project I will be updating my opnsense network to have network segmentation. This is the diagram of how the new network will look after the implementation of network segmentation. 
-
+This project simulates enterprise-style security monitoring by centralizing endpoint, network, and cloud telemetry into a unified detection and investigation environment.
+## Architecture Overview
 <img width="781" height="518" alt="image" src="https://github.com/user-attachments/assets/c546cc7e-301c-45fc-830a-f5c2356953d8" />
 
+## Key Features
+
+- Hybrid AWS and on-prem security monitoring
+- Centralized SIEM logging with Wazuh
+- Suricata IDS/IPS network monitoring
+- OPNsense firewall segmentation
+- Attack simulation and detection validation
+- Terraform-based infrastructure deployment
+- Automated user provisioning scripts
+- Threat investigation workflows
+
+# Opnsense-Firewall-Network-Segmentation
 We will set up a virtual environment using a Wide Area Network(WAN) and Local Area Network(LAN) and simulate a network connection between them. After downloading Virtual Box and Kali Linux we will configure a Wide Area Network(WAN) and Local Area Network(LAN) and simulate a network connection between them. Network Adapter one is used to simulate the WAN connection. Then adapater two is used to simulate a LAN connection.
 
 <img width="688" height="366" alt="image" src="https://github.com/user-attachments/assets/9f1c844a-669a-4091-b3db-938e700fbd69" />
