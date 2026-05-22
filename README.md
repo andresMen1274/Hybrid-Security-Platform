@@ -183,6 +183,18 @@ Then copy the rockyou.txt file to the ad-project directory. Enter the directory 
 
 <img width="630" height="346" alt="image" src="https://github.com/user-attachments/assets/e3cc7501-3cdd-4fc3-9760-602afe55a4ef" />
 
+## Docker Deployment & DMZ Infrastructure
+
+To simulate externally accessible enterprise services, an additional Ubuntu Server 22.04.5 virtual machine was deployed within the segmented DMZ environment. Docker was installed on the server to host vulnerable web applications and containerized services for security monitoring and attack simulation.
+
+The Docker-hosted web services were used to:
+- Generate realistic network traffic and security telemetry
+- Simulate externally exposed enterprise applications
+- Validate IDS/IPS detections and firewall monitoring capabilities
+- Analyze authentication attempts, reconnaissance activity, and web-based attacks within the hybrid security environment
+
+This infrastructure allowed Suricata IDS/IPS, Wazuh SIEM, and network monitoring systems to capture and investigate malicious activity targeting containerized services hosted within the DMZ network.
+
 ## Detection & Investigation
 ### Detection Examples
 - Windows Event ID 4625 failed login detection
