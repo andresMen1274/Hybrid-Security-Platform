@@ -295,3 +295,59 @@ sudo chown -R root:root /root/.aws
 sudo systemctl restart wazuh-manager
 
 sudo tail -f /var/ossec/logs/ossec.log
+
+# Port Scan Detection Investigation
+
+## Summary
+Detected repeated inbound connection attempts from multiple public IP addresses targeting internal AWS resources.
+
+## Telemetry Sources
+- AWS VPC Flow Logs
+- Wazuh SIEM
+- Suricata IDS
+
+## Indicators
+- Multiple unique source IPs
+- Rejected inbound traffic
+- Sequential destination port targeting
+- High connection frequency
+
+## Analysis
+AWS VPC Flow Logs revealed repeated rejected inbound traffic from external IP addresses attempting connections against internal RFC1918 addresses.
+
+The activity was blocked by AWS security groups and network ACL policies.
+
+## Evidence
+# Port Scan Detection Investigation
+
+## Summary
+Detected repeated inbound connection attempts from multiple public IP addresses targeting internal AWS resources.
+
+## Telemetry Sources
+- AWS VPC Flow Logs
+- Wazuh SIEM
+- Suricata IDS
+
+## Indicators
+- Multiple unique source IPs
+- Rejected inbound traffic
+- Sequential destination port targeting
+- High connection frequency
+
+## Analysis
+AWS VPC Flow Logs revealed repeated rejected inbound traffic from external IP addresses attempting connections against internal RFC1918 addresses.
+
+The activity was blocked by AWS security groups and network ACL policies.
+
+## Evidence
+<img width="1347" height="387" alt="image" src="https://github.com/user-attachments/assets/3c48d36e-8881-4b06-8c94-34cafc21353f" />
+
+## Lessons Learned
+- Restrictive inbound ACLs successfully mitigated unauthorized access attempts.
+- VPC Flow Logs provided visibility into denied network activity.
+- Correlating flow logs with IDS alerts improved investigation efficiency.
+
+## Lessons Learned
+- Restrictive inbound ACLs successfully mitigated unauthorized access attempts.
+- VPC Flow Logs provided visibility into denied network activity.
+- Correlating flow logs with IDS alerts improved investigation efficiency.
